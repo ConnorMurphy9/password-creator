@@ -7,16 +7,13 @@ var howlong = prompt("How many characters would you like your password to have?"
     else if (howlong > 128) {
       alert("Please enter an amount that is 128 or less.");
   }
-    // else if (howlong == NaN) {
+    // else if (howlong !== NaN) {
     //   alert("Please enter a number.");
+    //   return ("Please enter a number.");
     // }
-  
+
 parseInt (howlong);
 
-    for (i = 0; i < howlong; i++) {
-console.log("#"); 
-    }
-  
   
   
   
@@ -42,21 +39,26 @@ var randomLower = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 
 
 // paste into generatePassword function later
-if (wantUpper == true) {
-      randomUpper;  
-}
 
-if (wantLower == true) {
-      randomLower;
-}
 
-if (wantSymbols == true) {
-      randomSpecial();
-}
 
-if (wantNumbers == true) {
-      randomNumber;
-}
+
+
+// if (wantUpper == true) {
+//       randomUpper;  
+// }
+
+// if (wantLower == true) {
+//       randomLower;
+// }
+
+// if (wantSymbols == true) {
+//       randomSpecial();
+// }
+
+// if (wantNumbers == true) {
+//       randomNumber;
+// }
 
 
 
@@ -70,6 +72,23 @@ function generatePassword() {
   console.log("Hey! You clicked the button.");
 
   
+  // x = ?
+  for (i = 0; i < howlong; i++) {
+    if (wantUpper == true) {
+      randomUpper;  
+    }
+    if (wantLower == true) {
+      randomLower;
+    }
+    if (wantSymbols == true) {
+      randomSpecial();
+    }
+    if (wantNumbers == true) {
+      randomNumber;
+    }
+
+
+}
 
 
 // var howlong = prompt("How many characters would you like your password to have?", "Choose between 8 and 128 characters.");
